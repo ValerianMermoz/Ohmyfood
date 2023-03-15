@@ -3,7 +3,6 @@
     "sass": "^1.59.2"
   }
   ,"scripts": {
-    "sass": "sass",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch ./sass/accueil.scss:./css/accueil.css ./sass/restaurants.scss:./css/restaurants.css"
   }
 }
