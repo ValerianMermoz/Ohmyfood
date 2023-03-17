@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "sass": ""
+    "sass": "sass --watch ./sass/accueil.scss:./css/accueil.css ./sass/restaurants.scss:./css/restaurants.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.59.3"
   }
+}
