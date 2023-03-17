@@ -1,8 +1,11 @@
 {
-  "dependencies": {
-    "sass": "^1.59.2"
+  "name": "writting-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "sass": ""
+  },
+  "author": "",
+  "license": "ISC"
   }
-  ,"scripts": {
-    "sass": "sass --watch ./sass/accueil.scss:./css/accueil.css ./sass/restaurants.scss:./css/restaurants.css"
-  }
-}
