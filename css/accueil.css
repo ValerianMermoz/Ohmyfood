@@ -1,18 +1,17 @@
-/* Error: semicolons aren't allowed in the indented syntax.
- *   ,
- * 2 | $colour-primary: #99E2D0;
- *   |                         ^
- *   '
- *   sass\01_base\base.sass 2:25  @import
- *   sass\accueil.scss 1:9        root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: semicolons aren't allowed in the indented syntax.\a   \2577 \a 2 \2502  $colour-primary: #99E2D0;\d\a   \2502                          ^\a   \2575 \a   sass\\01_base\\base.sass 2:25  @import\a   sass\\accueil.scss 1:9        root stylesheet";
+a {
+  text-decoration: none;
+  color: black;
 }
+
+.blocPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=accueil.css.map */
