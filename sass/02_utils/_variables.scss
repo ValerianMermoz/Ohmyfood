@@ -1,16 +1,23 @@
 
-$colour-primary: #99E2D0;
-$colour-secondary:#008766;
-$colour-button: #9356DC;
-
-
+$vert-clair: #99E2D0;
+$vert-foncé:#008766;
+$violet: #9356DC;
+$bleu-clair : #89C8FA;
+$bleu-foncé : #003A68;
+$gris : #353535;
+$blanc : #FFFF;
 
 a {
     text-decoration: none;
     color: black;
 }
 
-h1 {
-    font-size: 15px;
+h1, h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
 }
 
