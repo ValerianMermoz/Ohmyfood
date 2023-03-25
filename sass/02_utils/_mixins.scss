@@ -1,11 +1,25 @@
 @mixin flexColumn{
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 @mixin flexRow{
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+
+@mixin button-search {
+    height: 50px;
+    width: 40%;
+    border-style: solid;
+	border-radius: 25px;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    color: $blanc;
+    font-size:16px;
+}
+
+.restaurantsearch {
+    @include button-search;
 }
