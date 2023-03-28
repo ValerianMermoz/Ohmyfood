@@ -1,33 +1,74 @@
+.section3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  gap: 40px;
+}
 
-.imagecard>img {
-    height: 230px;
-    width :100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+.titresection3 {
+  width: 70%;
+}
+
+.imagecard > img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.imagecard {
+  position: relative;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    border-radius: 20px;
-    background-color: #FFFFFF;
-    border-radius: 0px 0px 20px px;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-    }
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-radius: 20px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 20px px;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-    .detailcard > * {
-        padding-left: 15px;
-   }
+.detailcard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
-   .blocText {
-    
-   }
+.heart {
+  display: flex;
+  align-items: end;
+  padding-right: 25px;
+}
 
-   .nouveau {
-    position: absolute;
-    right:180px;
-    padding:5px;
-    background-color: $vert-clair;
-    color: $vert-foncé;
-   }
+.fa-heart {
+  font-size: 25px;
+  &:hover {
+    font-weight: bold;
+    color: $degrade;
+  }
+}
+
+.coeur:hover {
+  font-weight: bold;
+  color: $degrade;
+}
+
+.nouveau {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: $vert-clair;
+  color: $vert-foncé;
+}

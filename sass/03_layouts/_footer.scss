@@ -2,18 +2,22 @@ footer {
     background-color: $gris;
     width: 100%;
     height: 200px;
+    padding-top: 25px;
     padding-left :25px;
-    padding-right : 25px;
-    gap:5px;
+    gap:15px;
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    
+
+    h3 {
+        color: $blanc;
+       border: none;
+       text-decoration: inherit;
+    }
     .footer-logo {
         height: 25px;
     }
 
-    img {
+    span {
         height: 100%;
         color : $blanc;
     }

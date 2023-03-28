@@ -1,35 +1,6 @@
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h1, h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-h3 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 18px;
-}
-
-p {
-  font-size: 18px;
-}
-
-.restaurantsearch {
-  height: 50px;
-  width: 40%;
-  border-style: solid;
-  border-radius: 25px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-size: 16px;
-}
-
 * {
   font-family: "Roboto", sans-serif;
+  color: black;
   margin: 0;
   padding: 0;
 }
@@ -39,6 +10,34 @@ p {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h3 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+/*
+
+h1, h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+p {
+    font-size: 18px;
+}
+*/
 header {
   width: 100%;
   height: 65px;
@@ -54,10 +53,88 @@ header img {
   height: 100%;
 }
 
+footer {
+  background-color: #353535;
+  width: 100%;
+  height: 200px;
+  padding-top: 25px;
+  padding-left: 25px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+footer h3 {
+  color: white;
+  border: none;
+  text-decoration: inherit;
+}
+footer .footer-logo {
+  height: 25px;
+}
+footer span {
+  height: 100%;
+  color: white;
+}
+footer a {
+  display: flex;
+  color: white;
+  gap: 10px;
+}
+
 .section1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.section1 .localisation {
+  height: 50px;
+  width: 100%;
+}
+.section1 .localisation .search {
+  height: 100%;
+  width: 100%;
+  background-color: #EAEAEA;
+  color: black;
+  border: none;
+  font-family: FontAwesome, "Roboto";
+  text-decoration: inherit;
+  text-align: center;
+  font-weight: bold;
+}
+.section1 .title {
+  width: 100%;
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  padding: 50px 0px;
+}
+.section1 .title .texte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.section1 .title .texte h1 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.section1 .title .texte p {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.section1 .title .restaurantsearch {
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
 }
 
 .section2 {
@@ -68,77 +145,12 @@ header img {
   padding-right: 25px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 25px;
 }
 
-.section3 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #EAEAEA;
-  padding-top: 40px;
-}
-
-footer {
-  background-color: #353535;
-  width: 100%;
-  height: 200px;
-  padding-left: 25px;
-  padding-right: 25px;
-  gap: 5px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-footer .footer-logo {
-  height: 25px;
-}
-footer img {
-  height: 100%;
-  color: white;
-}
-footer a {
-  display: flex;
-  color: white;
-  gap: 10px;
-}
-
-.localisation {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #EAEAEA;
-}
-
-.textelocalisation {
-  width: 100%;
-  background-color: #F7F7F7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.textelocalisation .texte1 {
-  height: 70px;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.textelocalisation .texte2 {
-  height: 50px;
-  width: 50%;
-}
-
-.section2 > h2 {
-  display: flex;
-  justify-content: center;
-  width: 60%;
+.titresection2 {
+  width: 70%;
 }
 
 .conteneurchoix {
@@ -149,26 +161,57 @@ footer a {
   gap: 25px;
 }
 .conteneurchoix .choix {
-  width: 60%;
+  width: 70%;
   height: 75px;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  background: white;
+  background: #F7F7F7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+}
+.conteneurchoix .choix:hover {
+  background-color: #f5edff;
+  cursor: pointer;
 }
 .conteneurchoix .num {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
   background-color: #9356DC;
   color: white;
   border: 1px solid;
   border-radius: 50%;
+}
+.conteneurchoix .fa-mobile-screen-button,
+.conteneurchoix .fa-bars,
+.conteneurchoix .fa-store {
+  color: #7E7E7E;
+}
+.conteneurchoix .fa-mobile-screen-button:hover,
+.conteneurchoix .fa-bars:hover,
+.conteneurchoix .fa-store:hover {
+  color: #9356DC;
+}
+
+.section3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  gap: 40px;
+}
+
+.titresection3 {
+  width: 70%;
 }
 
 .imagecard > img {
@@ -176,26 +219,56 @@ footer a {
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+  position: relative;
+}
+
+.imagecard {
+  position: relative;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 70%;
   border-radius: 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 0px 0px 20px px;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.detailcard > * {
+.detailcard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.heart {
+  display: flex;
+  align-items: end;
+  padding-right: 25px;
+}
+
+.fa-heart {
+  font-size: 25px;
+}
+.fa-heart:hover {
+  font-weight: bold;
+  color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.coeur:hover {
+  font-weight: bold;
+  color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 .nouveau {
   position: absolute;
-  right: 180px;
-  padding: 5px;
+  right: 10px;
+  top: 10px;
   background-color: #99E2D0;
   color: #008766;
 }

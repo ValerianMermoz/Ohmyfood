@@ -7,25 +7,10 @@ $bleu-foncé : #003A68;
 $gris : #353535;
 $blanc : #FFFF;
 $gris2 : #EAEAEA;
+$gris3 : #7E7E7E;
 $fond : #F7F7F7;
+$degrade : linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
 
-a {
-    text-decoration: none;
-    color: black;
-}
+$roboto : 'Roboto', sans-serif;
 
-
-h1, h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-h3 {
-    font-family:'Shrikhand', sans-serif;
-    font-size: 18px;
-}
-
-p {
-    font-size: 18px;
-}
-
+$Shrikhand : 'Shrikhand', sans-serif;
