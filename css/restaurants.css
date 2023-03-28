@@ -58,7 +58,6 @@ footer {
   width: 100%;
   height: 200px;
   padding-top: 25px;
-  padding-left: 25px;
   gap: 15px;
   display: flex;
   flex-direction: column;
@@ -70,6 +69,7 @@ footer h3 {
 }
 footer .footer-logo {
   height: 25px;
+  padding-left: 25px;
 }
 footer span {
   height: 100%;
@@ -79,6 +79,22 @@ footer a {
   display: flex;
   color: white;
   gap: 10px;
+  padding-left: 25px;
+}
+
+.sectionmenu {
+  width: 100%;
+}
+
+.sectionmenu > img {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+}
+
+.menucard {
+  display: flex;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=restaurants.css.map */

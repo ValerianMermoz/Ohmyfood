@@ -1,0 +1,14 @@
+.sectionmenu {
+    width: 100%;
+}
+
+.sectionmenu > img {
+    width: 100%;
+    height: 375px;
+    object-fit: cover;
+}
+
+.menucard {
+    display: flex;
+    flex-direction: row;
+}
