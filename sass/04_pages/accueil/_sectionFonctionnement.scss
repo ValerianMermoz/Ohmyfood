@@ -1,9 +1,6 @@
 .section2 {
-  width: 100%;
-  height: 440px;
-  padding-left: 25px;
-  padding-top: 50px;
-  padding-right: 25px;
+ 
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +8,9 @@
 }
 
 .titresection2 {
-  width: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .conteneurchoix {
@@ -22,7 +21,7 @@
   gap: 25px;
 
   .choix {
-    width: 70%;
+    width: 90%;
     height: 75px;
     display: flex;
     flex-direction: row;

@@ -22,10 +22,6 @@ h1, h2, h3, h4, h5, p {
   margin-inline-end: 0px;
 }
 
-h3 {
-  font-family: "Shrikhand", sans-serif;
-}
-
 /*
 
 h1, h2 {
@@ -83,7 +79,10 @@ footer a {
 }
 
 .sectionmenu {
+  height: 1350px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionmenu > img {
@@ -92,9 +91,52 @@ footer a {
   object-fit: cover;
 }
 
-.menucard {
+.conteneurrestaurant {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  background-color: #F7F7F7;
+  top: 300px;
+}
+
+.titrerestaurant {
+  width: 85%;
   display: flex;
   flex-direction: row;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.titreentree {
+  width: 85%;
+}
+
+.entreesoulign {
+  border-bottom: 3px solid #99E2D0;
+}
+
+.conteneurentrees {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.cardentree {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  gap: 5px;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=restaurants.css.map */

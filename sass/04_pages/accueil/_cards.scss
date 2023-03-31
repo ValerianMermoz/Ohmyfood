@@ -1,74 +1,101 @@
-.section3 {
-  width: 100%;
+.section3{
+
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding: 40px;
   gap: 40px;
-}
 
-.titresection3 {
-  width: 70%;
-}
-
-.imagecard > img {
-  height: 230px;
+.titresection3{
   width: 100%;
-  object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  h2{}
 }
-
-.imagecard {
-  position: relative;
-}
-
-.card {
+.cards{
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+.card{
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
   border-radius: 20px;
   background-color: #ffffff;
-  border-radius: 20px 20px 20px 20px;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
-.detailcard {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
+    .imagecard{
 
-.heart {
-  display: flex;
-  align-items: end;
-  padding-right: 25px;
-}
+      width: 100%;
+      height: 70%;
+      position: relative;
+      
+      img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px 20px 0px 0px;
+         
+        }   
+        .nouveau{
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          padding: 5px;
+          background-color: $vert-clair;
+          color: $vert-foncé;
+        }
+      }
+   .detailcard{
 
-.fa-heart {
-  font-size: 25px;
-  &:hover {
-    font-weight: bold;
-    color: $degrade;
+    
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;;
+    align-items: center;
+    justify-content: space-between;
+   
+       .blocText{
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap:10px;
+            h3{
+
+            }
+            p{
+
+            }
+       }
+       .heart{
+        padding-right: 20px;
+       
+        .fa-heart{
+          font-size: 25px;
+          &:hover {
+            font-weight: bold;
+            color: $degrade;
+          }
+        }
+        .far{}
+        .fas{}
+       
+       }
+          
+      }
+    }
   }
-}
+  }
 
-.coeur:hover {
-  font-weight: bold;
-  color: $degrade;
-}
 
-.nouveau {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: $vert-clair;
-  color: $vert-foncé;
-}
