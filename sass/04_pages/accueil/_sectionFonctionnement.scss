@@ -1,25 +1,22 @@
 .section2 {
- 
   padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
-}
+  .titresection2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
 
-.titresection2 {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.conteneurchoix {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 25px;
-
+  .conteneurchoix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 25px;
+  }
   .choix {
     width: 90%;
     height: 75px;
@@ -35,27 +32,26 @@
       background-color: #f5edff;
       cursor: pointer;
     }
-  }
+    .num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-left: -15px;
+      background-color: $violet;
+      color: $blanc;
+      border: 1px solid;
+      border-radius: 50%;
+    }
 
-  .num {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-    background-color: $violet;
-    color: $blanc;
-    border: 1px solid;
-    border-radius: 50%;
-  }
-
-  .fa-mobile-screen-button,
-  .fa-bars,
-  .fa-store {
-    color: $gris3;
-    &:hover {
-      color: $violet;
+    .fa-mobile-screen-button,
+    .fa-bars,
+    .fa-store {
+      color: $gris3;
+      &:hover {
+        color: $violet;
+      }
     }
   }
 }

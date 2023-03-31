@@ -87,7 +87,7 @@ footer a {
   height: 50px;
   width: 100%;
 }
-.section1 .localisation .search {
+.section1 .search {
   height: 100%;
   width: 100%;
   background-color: #EAEAEA;
@@ -108,22 +108,22 @@ footer a {
   gap: 50px;
   padding: 50px 0px;
 }
-.section1 .title .texte {
+.section1 .texte {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 20px;
 }
-.section1 .title .texte h1 {
+.section1 h1 {
   padding-left: 25px;
   padding-right: 25px;
 }
-.section1 .title .texte p {
+.section1 p {
   padding-left: 25px;
   padding-right: 25px;
 }
-.section1 .title .restaurantsearch {
+.section1 .restaurantsearch {
   height: 50px;
   width: 220px;
   border: none;
@@ -141,21 +141,19 @@ footer a {
   align-items: center;
   gap: 25px;
 }
-
-.titresection2 {
+.section2 .titresection2 {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
-
-.conteneurchoix {
+.section2 .conteneurchoix {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   gap: 25px;
 }
-.conteneurchoix .choix {
+.section2 .choix {
   width: 90%;
   height: 75px;
   display: flex;
@@ -166,11 +164,11 @@ footer a {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
 }
-.conteneurchoix .choix:hover {
+.section2 .choix:hover {
   background-color: #f5edff;
   cursor: pointer;
 }
-.conteneurchoix .num {
+.section2 .choix .num {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,14 +180,14 @@ footer a {
   border: 1px solid;
   border-radius: 50%;
 }
-.conteneurchoix .fa-mobile-screen-button,
-.conteneurchoix .fa-bars,
-.conteneurchoix .fa-store {
+.section2 .choix .fa-mobile-screen-button,
+.section2 .choix .fa-bars,
+.section2 .choix .fa-store {
   color: #7E7E7E;
 }
-.conteneurchoix .fa-mobile-screen-button:hover,
-.conteneurchoix .fa-bars:hover,
-.conteneurchoix .fa-store:hover {
+.section2 .choix .fa-mobile-screen-button:hover,
+.section2 .choix .fa-bars:hover,
+.section2 .choix .fa-store:hover {
   color: #9356DC;
 }
 

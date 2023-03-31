@@ -1,61 +1,55 @@
 .section1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-
-.localisation {
+  .localisation {
     height: 50px;
     width: 100%;
-   
+  }
 
-    .search{
-        height: 100%;
-       width: 100%;
-       background-color: $gris2;
-       color: black;
-       border: none;
-       font-family: FontAwesome, 'Roboto';
-       text-decoration: inherit;
-       text-align: center;
-       font-weight: bold;
-    
-    }
-}
+  .search {
+    height: 100%;
+    width: 100%;
+    background-color: $gris2;
+    color: black;
+    border: none;
+    font-family: FontAwesome, "Roboto";
+    text-decoration: inherit;
+    text-align: center;
+    font-weight: bold;
+  }
 
-.title {
+  .title {
     width: 100%;
     background-color: $fond;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap:50px;
-    padding :50px 0px;
+    gap: 50px;
+    padding: 50px 0px;
+  }
+  
+  .texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
 
-    .texte{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap:20px;
-    h1 {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
+  h1 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
-    p {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-   }
-   .restaurantsearch {
+  p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .restaurantsearch {
     @include button-search;
-   }
-
+  }
 }
-
-
-
-}
-
