@@ -1,3 +1,11 @@
+@keyframes heartFull {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -15,25 +23,35 @@ a {
   color: black;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-/*
-
-h1, h2 {
-    font-size: 24px;
-    font-weight: 700;
+h2 {
+  font-size: 21px;
 }
 
+h4 {
+  font-family: "Shrikhand";
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
 
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
-*/
+
 header {
   width: 100%;
   height: 65px;
@@ -41,6 +59,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 100px;
+  }
 }
 header .header-logo {
   height: 44px;
@@ -58,7 +81,16 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer h3 {
+@media screen and (min-width: 1200px) {
+  footer {
+    height: 100px;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 25px;
+  }
+}
+footer h4 {
   color: white;
   border: none;
   text-decoration: inherit;
@@ -66,6 +98,13 @@ footer h3 {
 footer .footer-logo {
   height: 25px;
   padding-left: 25px;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer-logo {
+    order: 1;
+    padding-right: 25px;
+    padding-left: 50px;
+  }
 }
 footer span {
   height: 100%;
@@ -76,6 +115,11 @@ footer a {
   color: white;
   gap: 10px;
   padding-left: 25px;
+}
+@media screen and (min-width: 1200px) {
+  footer a {
+    padding-left: 10px;
+  }
 }
 
 .section1 {
@@ -119,6 +163,11 @@ footer a {
   padding-left: 25px;
   padding-right: 25px;
 }
+@media screen and (min-width: 1200px) {
+  .section1 h1 {
+    font-size: 40px;
+  }
+}
 .section1 p {
   padding-left: 25px;
   padding-right: 25px;
@@ -141,6 +190,11 @@ footer a {
   align-items: center;
   gap: 25px;
 }
+@media screen and (min-width: 1200px) {
+  .section2 {
+    padding: 80px;
+  }
+}
 .section2 .titresection2 {
   width: 100%;
   display: flex;
@@ -152,6 +206,12 @@ footer a {
   align-items: center;
   width: 100%;
   gap: 25px;
+}
+@media screen and (min-width: 1200px) {
+  .section2 .conteneurchoix {
+    flex-direction: row;
+    gap: 35px;
+  }
 }
 .section2 .choix {
   width: 90%;
@@ -200,6 +260,11 @@ footer a {
   padding: 40px;
   gap: 40px;
 }
+@media screen and (min-width: 1200px) {
+  .section3 {
+    padding: 80px;
+  }
+}
 .section3 .titresection3 {
   width: 100%;
   display: flex;
@@ -214,6 +279,13 @@ footer a {
   align-items: center;
   gap: 40px;
 }
+@media screen and (min-width: 1200px) {
+  .section3 .cards {
+    flex-flow: row wrap;
+    gap: 100px;
+    justify-content: unset;
+  }
+}
 .section3 .cards .card {
   display: flex;
   flex-direction: column;
@@ -222,6 +294,11 @@ footer a {
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1200px) {
+  .section3 .cards .card {
+    width: 40%;
+  }
 }
 .section3 .cards .card .imagecard {
   width: 100%;
@@ -259,13 +336,36 @@ footer a {
 }
 .section3 .cards .card .detailcard .heart {
   padding-right: 20px;
+  position: relative;
 }
 .section3 .cards .card .detailcard .heart .fa-heart {
-  font-size: 25px;
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
 }
-.section3 .cards .card .detailcard .heart .fa-heart:hover {
-  font-weight: bold;
-  color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+.section3 .cards .card .detailcard .heart .fa-regular {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.section3 .cards .card .detailcard .heart .fa-regular:hover {
+  opacity: 0;
+  z-index: 1;
+}
+.section3 .cards .card .detailcard .heart .fa-regular:hover + .fa-solid {
+  opacity: 1;
+  z-index: 2;
+  animation: heartFull 0.5s linear both;
+}
+.section3 .cards .card .detailcard .heart .fa-solid {
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
 }
 
 /*# sourceMappingURL=accueil.css.map */

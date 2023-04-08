@@ -23,3 +23,53 @@
 @mixin titreShrikand {
     font-family:'Shrikhand', sans-serif;
 }
+
+@mixin heart {
+
+    .fa-heart{
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+    }
+    .fa-regular{
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+        &:hover{
+            opacity: 0;
+            z-index: 1;
+            + .fa-solid{
+                opacity: 1;
+                z-index: 2;
+                animation: heartFull 0.5s linear both;
+            }
+        }
+    }
+    .fa-solid{
+        z-index: 1;
+        opacity: 0;
+        background: $degrade;
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+
+
+    }
+}
+@keyframes heartFull {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+@mixin desktop-only {
+    @media screen and (min-width: 1200px){
+        @content;}
+}

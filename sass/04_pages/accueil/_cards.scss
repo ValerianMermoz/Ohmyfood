@@ -1,6 +1,4 @@
 .section3{
-
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +6,16 @@
   background-color: #eaeaea;
   padding: 40px;
   gap: 40px;
+  @include desktop-only {
+    padding:80px;
+  }
 
 .titresection3{
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
 }
 .cards{
   width: 100%;
@@ -22,8 +24,13 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-.card{
+  @include desktop-only {
+    flex-flow:row wrap;
+    gap:100px;
+    justify-content:unset;
+  }
 
+.card{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -31,9 +38,11 @@
   border-radius: 20px;
   background-color: #ffffff;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+  @include desktop-only {
+    width:40%;
+  }
 
     .imagecard{
-
       width: 100%;
       height: 70%;
       position: relative;
@@ -43,8 +52,8 @@
           width: 100%;
           object-fit: cover;
           border-radius: 20px 20px 0px 0px;
+        }  
          
-        }   
         .nouveau{
           position: absolute;
           right: 20px;
@@ -55,8 +64,6 @@
         }
       }
    .detailcard{
-
-    
     width: 100%;
     height: 30%;
     display: flex;
@@ -74,14 +81,10 @@
        }
        .heart{
         padding-right: 20px;
+        position: relative;
+        @include heart;
+
        
-        .fa-heart{
-          font-size: 25px;
-          &:hover {
-            font-weight: bold;
-            color: $degrade;
-          }
-        }
        }
           
       }

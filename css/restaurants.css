@@ -1,3 +1,11 @@
+@keyframes heartFull {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -15,25 +23,35 @@ a {
   color: black;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin-block-start: 0px;
   margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
 
-/*
-
-h1, h2 {
-    font-size: 24px;
-    font-weight: 700;
+h2 {
+  font-size: 21px;
 }
 
+h4 {
+  font-family: "Shrikhand";
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
 
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
-*/
+
 header {
   width: 100%;
   height: 65px;
@@ -41,6 +59,11 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 100px;
+  }
 }
 header .header-logo {
   height: 44px;
@@ -58,7 +81,16 @@ footer {
   display: flex;
   flex-direction: column;
 }
-footer h3 {
+@media screen and (min-width: 1200px) {
+  footer {
+    height: 100px;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    padding-bottom: 25px;
+  }
+}
+footer h4 {
   color: white;
   border: none;
   text-decoration: inherit;
@@ -66,6 +98,13 @@ footer h3 {
 footer .footer-logo {
   height: 25px;
   padding-left: 25px;
+}
+@media screen and (min-width: 1200px) {
+  footer .footer-logo {
+    order: 1;
+    padding-right: 25px;
+    padding-left: 50px;
+  }
 }
 footer span {
   height: 100%;
@@ -77,22 +116,47 @@ footer a {
   gap: 10px;
   padding-left: 25px;
 }
+@media screen and (min-width: 1200px) {
+  footer a {
+    padding-left: 10px;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.iconBack {
+  position: absolute;
+  left: 25px;
+}
+
+.fa-arrow-left {
+  font-size: 20px;
+}
 
 .sectionmenu {
-  height: 1350px;
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.sectionmenu > img {
+.sectionmenu h4 {
+  font-size: 35px;
+}
+.sectionmenu .imagemenu {
   width: 100%;
-  height: 375px;
+  height: 70%;
+}
+.sectionmenu img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
-
-.conteneurrestaurant {
-  position: absolute;
+.sectionmenu .conteneurprincipal {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -101,42 +165,101 @@ footer a {
   background-color: #F7F7F7;
   top: 300px;
 }
-
-.titrerestaurant {
-  width: 85%;
+.sectionmenu .conteneurtitre {
+  width: 90%;
   display: flex;
   flex-direction: row;
-  font-size: 25px;
+  font-size: 35px;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding: 15px;
+  gap: 80px;
+}
+.sectionmenu .coeur {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+.sectionmenu .coeur i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+.sectionmenu .coeur i:first-child {
+  z-index: 2;
+}
+.sectionmenu .coeur i:last-child {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.sectionmenu #coeur-checkbox:checked + .coeur i:first-child {
+  opacity: 0;
+}
+.sectionmenu #coeur-checkbox:checked + .coeur i:last-child {
+  opacity: 1;
+}
+.sectionmenu .hidden {
+  position: absolute;
+  opacity: 0;
 }
 
-.titreentree {
-  width: 85%;
-}
-
-.entreesoulign {
-  border-bottom: 3px solid #99E2D0;
-}
-
-.conteneurentrees {
+.conteneurmenu {
   display: flex;
-  width: 100%;
+  width: 90%;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 15px;
+  padding: 20px;
 }
-
-.cardentree {
-  width: 85%;
+.conteneurmenu .titremenu {
+  padding-top: 40px;
+  width: 100%;
+}
+.conteneurmenu .entreesoulign {
+  border-bottom: 3px solid #99E2D0;
+}
+.conteneurmenu .cardmenu {
+  cursor: pointer;
+  width: 100%;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   gap: 5px;
-  padding: 10px;
+  padding: 15px;
+}
+.conteneurmenu .cardmenu:active {
+  transform: scale(1);
+  transition: transform 330ms ease-in-out;
+}
+.conteneurmenu .cardmenu .prix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.commandebouton {
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 16px;
+}
+
+.blocbouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 /*# sourceMappingURL=restaurants.css.map */
