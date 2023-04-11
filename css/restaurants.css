@@ -65,10 +65,17 @@ header {
     height: 100px;
   }
 }
+header .iconBack {
+  position: absolute;
+  left: 25px;
+}
+header .iconBack .fa-arrow-left {
+  font-size: 20px;
+}
 header .header-logo {
   height: 44px;
 }
-header img {
+header .header-logo img {
   height: 100%;
 }
 
@@ -122,18 +129,70 @@ footer a {
   }
 }
 
-header {
-  display: flex;
-  align-items: center;
+.imagemenu {
+  position: relative;
+  width: 100%;
+  height: 250px;
 }
-
-.iconBack {
+.imagemenu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imagemenu .conteneurtitre {
   position: absolute;
-  left: 25px;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  background: #f6f6f6;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 35px;
 }
-
-.fa-arrow-left {
-  font-size: 20px;
+.imagemenu .conteneurtitre h4 {
+  font-size: 35px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.imagemenu .conteneurtitre .heart {
+  top: 30px;
+  position: relative;
+}
+.imagemenu .conteneurtitre .heart .fa-heart {
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+}
+.imagemenu .conteneurtitre .heart .fa-regular {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.imagemenu .conteneurtitre .heart .fa-regular:hover {
+  opacity: 0;
+  z-index: 1;
+}
+.imagemenu .conteneurtitre .heart .fa-regular:hover + .fa-solid {
+  opacity: 1;
+  z-index: 2;
+  animation: heartFull 0.5s linear both;
+}
+.imagemenu .conteneurtitre .heart .fa-solid {
+  z-index: 1;
+  opacity: 0;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+}
+.imagemenu .conteneurtitre .heart .fa-heart {
+  font-size: 30px;
 }
 
 .sectionmenu {
@@ -143,80 +202,15 @@ header {
   justify-content: center;
   align-items: center;
 }
-.sectionmenu h4 {
-  font-size: 35px;
-}
-.sectionmenu .imagemenu {
-  position: relative;
-  width: 100%;
-  height: 70%;
-}
-.sectionmenu img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .sectionmenu .conteneurprincipal {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   background-color: #F7F7F7;
   top: 300px;
-}
-.sectionmenu .conteneurtitre {
-  top: 400px;
-  background: white;
-  border-radius: 25px;
-  position: absolute;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  font-size: 35px;
-  align-items: center;
-  gap: 80px;
-}
-.sectionmenu .conteneurtitre h4 {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.sectionmenu .conteneurtitre .heart {
-  top: 30px;
-  position: relative;
-}
-.sectionmenu .conteneurtitre .heart .fa-heart {
-  font-size: 24px;
-  position: absolute;
-  right: 20px;
-  bottom: 0px;
-}
-.sectionmenu .conteneurtitre .heart .fa-regular {
-  z-index: 2;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-.sectionmenu .conteneurtitre .heart .fa-regular:hover {
-  opacity: 0;
-  z-index: 1;
-}
-.sectionmenu .conteneurtitre .heart .fa-regular:hover + .fa-solid {
-  opacity: 1;
-  z-index: 2;
-  animation: heartFull 0.5s linear both;
-}
-.sectionmenu .conteneurtitre .heart .fa-solid {
-  z-index: 1;
-  opacity: 0;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-clip: content-box;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  color: transparent;
-}
-.sectionmenu .conteneurtitre .heart .fa-heart {
-  font-size: 30px;
 }
 
 .conteneurmenu {
@@ -239,20 +233,35 @@ header {
   cursor: pointer;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
-  gap: 5px;
-  padding: 15px;
+  overflow: hidden;
+}
+.conteneurmenu .cardmenu .cardText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: auto;
+  flex: 1;
 }
 .conteneurmenu .cardmenu .prix {
+  width: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 15px;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.conteneurmenu .cardmenu .fa-circle-check {
-  display: none;
+.conteneurmenu .cardmenu .bandeau {
+  width: 70px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -70px;
+}
+.conteneurmenu .cardmenu:hover > .bandeau {
+  margin-right: 0px;
 }
 
 .commandebouton {
@@ -260,8 +269,8 @@ header {
   width: 220px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -269,7 +278,8 @@ header {
   transition: opacity 0.5s ease-in-out;
 }
 .commandebouton:hover {
-  opacity: 0.85;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .blocbouton {

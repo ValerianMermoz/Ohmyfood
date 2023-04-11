@@ -65,10 +65,17 @@ header {
     height: 100px;
   }
 }
+header .iconBack {
+  position: absolute;
+  left: 25px;
+}
+header .iconBack .fa-arrow-left {
+  font-size: 20px;
+}
 header .header-logo {
   height: 44px;
 }
-header img {
+header .header-logo img {
   height: 100%;
 }
 
@@ -177,8 +184,8 @@ footer a {
   width: 220px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.25);
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -186,7 +193,8 @@ footer a {
   transition: opacity 0.5s ease-in-out;
 }
 .section1 .restaurantsearch:hover {
-  opacity: 0.85;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 .section2 {
@@ -289,7 +297,7 @@ footer a {
   .section3 .cards {
     flex-flow: row wrap;
     gap: 100px;
-    justify-content: unset;
+    justify-content: space-around;
   }
 }
 .section3 .cards .card {
@@ -367,7 +375,7 @@ footer a {
 .section3 .cards .card .detailcard .heart .fa-solid {
   z-index: 1;
   opacity: 0;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
   background-clip: content-box;
   -webkit-background-clip: text;
   -moz-background-clip: text;

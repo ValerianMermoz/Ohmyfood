@@ -1,12 +1,39 @@
-header {
+.imagemenu{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+.conteneurtitre{
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    background: #f6f6f6;
+    border-radius: 25px 25px 0 0;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-}
-.iconBack {
-    position: absolute;
-    left:25px;
-}
+    font-size: 35px;
+    
 
-.fa-arrow-left {
-   font-size : 20px;
+    h4{
+        font-size: 35px;
+        padding-top:30px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .heart{
+        top:30px;
+        position: relative;
+        @include heart;
+        .fa-heart{
+          font-size:30px;
+        }
+    }
+}
 }

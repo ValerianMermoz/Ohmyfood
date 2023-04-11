@@ -10,11 +10,23 @@ header {
     }
     
     
+    .iconBack {
+        position: absolute;
+        left:25px;
+     
+    .fa-arrow-left {
+        font-size : 20px;
+    }
+    }
+    
     .header-logo {
         height: 44px;
+        img {
+            height: 100%;
+        }
     }
 
-    img {
-        height: 100%;
-    }
+    
 }
+
+

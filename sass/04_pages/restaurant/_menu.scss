@@ -5,59 +5,17 @@
   justify-content: center;
   align-items: center;
 
-  h4 {
-    font-size: 35px;
-  }
-
-  .imagemenu {
-    position: relative;
-    width: 100%;
-    height: 70%;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
   .conteneurprincipal {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     background-color: $fond;
     top: 300px;
   }
 
-  .conteneurtitre {
-    top:400px;
-    background: white;
-    border-radius: 25px;
-    position:absolute;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    font-size: 35px;
-    align-items: center;
-    gap: 80px;
-  
-    h4 {
-      padding-top:30px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-  .heart {
-    top:30px;
-    position: relative;
-    @include heart;
-    .fa-heart{
-      font-size:30px;
-    }
-  }
-}
 }
 
 .conteneurmenu {
@@ -82,24 +40,45 @@
     cursor: pointer;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
-    gap: 5px;
-    padding: 15px;
-
+    overflow: hidden;
+    .cardText{
+      
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: auto;
+      flex: 1;
+    }
 
 
     .prix {
+      width: 70px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding-right: 15px;
+      flex-direction: column;
+      justify-content: flex-end;
     }
+
+    .bandeau{
+      width: 70px;
+      background-color: aqua;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: -70px;
     .fa-circle-check {
-      display:none;
+      
     }
+
   }
+  
+  &:hover > .bandeau{
+    margin-right: 0px;
+  }
+}
 }
 
 .commandebouton {

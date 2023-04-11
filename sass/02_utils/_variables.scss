@@ -9,7 +9,8 @@ $blanc : #FFFF;
 $gris2 : #EAEAEA;
 $gris3 : #7E7E7E;
 $fond : #F7F7F7;
-$degrade : linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+$degrade : linear-gradient(to bottom right, #9356DC, #FF79DA);
+$degradeInverse : linear-gradient(to bottom right, #FF79DA,  #9356DC );
 
 $roboto : 'Roboto', sans-serif;
 

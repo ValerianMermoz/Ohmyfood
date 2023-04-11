@@ -27,7 +27,7 @@
   @include desktop-only {
     flex-flow:row wrap;
     gap:100px;
-    justify-content:unset;
+    justify-content: space-around;
   }
 
 .card{
