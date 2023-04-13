@@ -263,14 +263,21 @@ footer a {
   align-items: center;
   justify-content: center;
   margin-right: -70px;
+  transform: translateX(100%);
+  transition: all 0.4s;
 }
 .conteneurmenu .cardmenu .bandeau .fa-circle-check {
   font-size: 20px;
-  color: #99E2D0;
-  background-color: white;
+  color: white;
+  background: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .conteneurmenu .cardmenu:hover > .bandeau {
+  transform: translateX(0%);
   margin-right: 0px;
+  animation: reverse;
 }
 
 .commandebouton {
