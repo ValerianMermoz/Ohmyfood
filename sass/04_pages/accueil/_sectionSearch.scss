@@ -1,3 +1,9 @@
+
+.blocPage:hover {
+  transition: 2s;
+  animation: slideUp 0.5s;
+}
+
 .section1 {
   display: flex;
   flex-direction: column;
