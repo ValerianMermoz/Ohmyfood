@@ -15,7 +15,6 @@
     background-color: $fond;
     top: 300px;
   }
-
 }
 
 .conteneurmenu {
@@ -44,39 +43,31 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     overflow: hidden;
-    animation: listMenuAnim 1s both; 
-    .cardText{
+    animation: listMenuAnim 1s both;
+    .cardText {
       display: flex;
       flex-direction: column;
       gap: 10px;
       width: auto;
       flex: 1;
-      padding-top : 20px;
-      padding-left:20px;
-      padding-bottom:15px;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 15px;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
 
-      h2{
+      h2 {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
       }
-      p{
+      p {
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
       }
     }
-
-
-
-
-
-
-
-
 
     .prix {
       width: 70px;
@@ -84,10 +75,10 @@
       align-items: center;
       flex-direction: column;
       justify-content: flex-end;
-      padding-bottom:15px;
+      padding-bottom: 15px;
     }
 
-    .bandeau{
+    .bandeau {
       width: 70px;
       background-color: $vert-clair;
       display: flex;
@@ -96,25 +87,23 @@
       margin-right: -70px;
       transform: translateX(100%);
       transition: all 0.4s;
-      
 
-    .fa-circle-check {
-      font-size:20px;
-      color:white;
-      background: white;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      .fa-circle-check {
+        font-size: 20px;
+        color: white;
+        background: white;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
     }
 
+    &:hover > .bandeau {
+      transform: translateX(0%);
+      margin-right: 0px;
+      animation: reverse;
+    }
   }
-  
-  &:hover > .bandeau{
-    transform: translateX(0%);
-    margin-right: 0px;
-    animation: reverse;
-  }
-}
 }
 
 .commandebouton {
@@ -125,29 +114,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;}
+  padding: 40px;
+}
 
 @keyframes listMenuAnim {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(75%);
   }
 
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0%);
   }
 }
 
-.cardmenu:nth-child(2){
-  animation-delay : 0.2s;
+.cardmenu:nth-child(2) {
+  animation-delay: 0.2s;
 }
-.cardmenu:nth-child(3){
-  animation-delay : 0.4s;
+.cardmenu:nth-child(3) {
+  animation-delay: 0.4s;
 }
-.cardmenu:nth-child(4){
-  animation-delay : 0.6s;
+.cardmenu:nth-child(4) {
+  animation-delay: 0.6s;
 }
-.cardmenu:nth-child(5){
-  animation-delay : 0.8s;
+.cardmenu:nth-child(5) {
+  animation-delay: 0.8s;
 }
